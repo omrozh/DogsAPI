@@ -1,0 +1,6 @@
+.DS_Store
+.idea
+*.tags
+.coverage
+.python-version
+.vscode/
