@@ -28,10 +28,11 @@ Your tasks here are relatively simple, but should sufficiently test you knowledg
 
 Here are the goals we'd like you to achieve:
 
-1. Construct a management command that iterates through the list of breeds from Dog API. Each breed returned should be stored into the local database, along side the last 100 images provided for each breed.
+1. Construct a management command that iterates through the list of breeds from Dog API. Each breed returned should be stored in the local database, along side the last 100 media assets provided for each breed.
+   - Images returned by the API **must** be stored locally, rather than just their remote URL.
 2. Create two API endpoints.
    - One should return a list of all dog breeds that are currently held within the database and their current image count.
-   - The second should be able to take in the name of a dog breed and a number of images, returning their URLs as a JSon response.
+   - The second should be able to take in the name of a dog breed and a number of images, returning the URLs to their locally stored assets as a JSon response.
 
 Django management commands can be run from the project's root directory in the following fashion:
 
