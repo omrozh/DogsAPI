@@ -1,0 +1,55 @@
+*.py[cod]
+
+# C extensions.
+*.so
+
+# Developer files.
+.editorconfig
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Frontend & static files.
+node_modules
+package
+.sass-cache
+docs/js/*
+
+# Git.
+.git
+.gitignore
+
+# Logs.
+pip-log.txt
+*.log
+logs
+
+# OSX specific.
+.DS_Store
+__MACOSX
+
+# Packages.
+*.egg
+*.egg-info
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+__pycache__
+
+# Unit test / coverage reports.
+.coverage
+.tox
+nosetests.xml
+
+# Translations & locale.
+*.mo
+
+# Misc.
+*.md

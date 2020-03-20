@@ -1,0 +1,10 @@
+*.pyc
+__pycache__
+.build
+*.log
+.yarn-cache
+
+django/frontend/dist/
+django/frontend/node_modules/
+django/static/*
+django/media/*

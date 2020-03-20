@@ -1,0 +1,48 @@
+version: "3"
+services:
+  django:
+    build:
+      context: ./src
+    env_file:
+      - ./assets/config/docker.env
+    image: python_django_test:latest
+    ports:
+      - "8000:8000"
+    depends_on:
+      - "mysql"
+      - "redis"
+    links:
+      - mysql:database
+      - redis:cache
+    volumes:
+      - ./src:/www:cached
+    logging:
+      options:
+        max-size: "100k"
+        max-file: "20"
+
+  mysql:
+    build:
+      context: ./mysql
+    env_file:
+      - ./assets/config/docker.env
+    ports:
+      - "3001:3306"
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    logging:
+      options:
+        max-size: "100k"
+        max-file: "20"
+
+  redis:
+    build:
+      context: ./redis
+    env_file:
+      - ./assets/config/docker.env
+    ports:
+      - "6379"
+    logging:
+      options:
+        max-size: "100k"
+        max-file: "20"

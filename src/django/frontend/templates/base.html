@@ -1,0 +1,56 @@
+{% load i18n sekizai_tags static %}
+
+<!DOCTYPE html>
+<html lang="en-gb" class="en-gb no-js">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link href="{{ request.build_absolute_uri }}" rel="canonical" />
+
+        <meta name="theme-color" content="#ffffff" />
+
+        <link
+            href="{% static 'css/app.css' %}?v={{ BUILD_NUMBER }}"
+            rel="stylesheet"
+            media="all"
+        />
+        <link
+            href="{% static 'css/app-sm.css' %}?v={{ BUILD_NUMBER }}"
+            rel="stylesheet"
+            media="(min-width: 400px)"
+        />
+        <link
+            href="{% static 'css/app-md.css' %}?v={{ BUILD_NUMBER }}"
+            rel="stylesheet"
+            media="(min-width: 768px)"
+        />
+        <link
+            href="{% static 'css/app-lg.css' %}?v={{ BUILD_NUMBER }}"
+            rel="stylesheet"
+            media="(min-width: 1000px)"
+        />
+        <link
+            href="{% static 'css/app-xl.css' %}?v={{ BUILD_NUMBER }}"
+            rel="stylesheet"
+            media="(min-width: 1200px)"
+        />
+
+        <script
+            src="{% static 'scripts/modernizr.js' %}?v={{ BUILD_NUMBER }}"
+            type="text/javascript"
+        ></script>
+        <script
+            src="{% static 'scripts/head.js' %}?v={{ BUILD_NUMBER }}"
+            type="text/javascript"
+        ></script>
+    </head>
+    <body class="{% block body_class %}{% endblock %}">
+        <script
+            defer
+            src="{% static 'scripts/app.js' %}?v={{ BUILD_NUMBER }}"
+            type="text/javascript"
+        ></script>
+    </body>
+</html>
