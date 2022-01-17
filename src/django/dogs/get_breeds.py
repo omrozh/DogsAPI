@@ -33,6 +33,9 @@ def getBreeds(redownload_images=False):
         os.mkdir("./dog_images")
     elif not redownload_images:
         return all_breeds
+    else:
+        os.system("rm -f ./dog_images")
+        os.mkdir("./dog_images")
 
     for breed_image in all_breeds:
         index = 0
