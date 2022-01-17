@@ -26,7 +26,7 @@ def getBreedImages(req, breed):
         "files": []
     }
     for file in listdir(f"./dog_images/{breed}"):
-        breed_dict["files"].append(f"/view_image/{breed}/{file}")
+        breed_dict["files"].append(f"/dogs/view_image/{breed}/{file}")
 
     return JsonResponse(breed_dict)
 
