@@ -1,7 +1,7 @@
 #Python Django Test
 ## How to use the API
 
-- Visit /getdb to make the API request to the Dogs API to index all breeds. This is not done to make testing easier.
+- Run get-db management command.
 
 - Unless you want to download all the images again do not change the redownload_images parameter to true while calling the getBreeds function.
 

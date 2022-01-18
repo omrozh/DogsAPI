@@ -1,8 +1,6 @@
 from requests import get
 from json import loads
 import os
-from random import choice
-from string import ascii_letters
 
 
 def getBreeds(redownload_images=False):

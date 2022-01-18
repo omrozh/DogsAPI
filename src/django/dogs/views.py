@@ -1,16 +1,7 @@
 from django.shortcuts import redirect
 from .models import Dog
 from os import listdir
-from .get_breeds import getBreeds
 from django.http import JsonResponse, HttpResponse
-
-
-def genDatabase(req):
-    create_db_data = getBreeds()
-    for breed in create_db_data:
-        new_dob_breed = Dog(breed_name=breed)
-        new_dob_breed.save()
-    return redirect("/dogs/view_all_breeds")
 
 
 def getAllBreeds(req):
