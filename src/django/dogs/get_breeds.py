@@ -5,14 +5,6 @@ from random import choice
 from string import ascii_letters
 
 
-def id_gen(length=16):
-    out = ""
-    for letter in range(length):
-        out += choice(ascii_letters)
-
-    return out
-
-
 def getBreeds(redownload_images=False):
     req_breeds = get("https://dog.ceo/api/breeds/list/all")
 
@@ -45,7 +37,7 @@ def getBreeds(redownload_images=False):
             if not os.path.exists(f"./dog_images/{breed_image}"):
                 os.mkdir(f"./dog_images/{breed_image}")
 
-            with open(f"./dog_images/{breed_image}/img{id_gen()}.jpg", "wb") as image_file:
+            with open(f"./dog_images/{breed_image}/img{str(index)}.jpg", "wb") as image_file:
                 img_req = get(image).content
                 image_file.write(img_req)
 
