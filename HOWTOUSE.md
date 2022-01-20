@@ -1,4 +1,3 @@
-#Python Django Test
 ## How to use the API
 
 - Run get-db management command.
